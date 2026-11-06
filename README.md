@@ -1,2 +1,2 @@
 # RioDeLeon
-Persona Website to showcase my portfolio-- Operations and AI Automation Projects
+Personal portfolio showcasing Business Operations, process optimization, and AI automation projects.
