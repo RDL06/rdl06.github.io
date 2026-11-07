@@ -46,14 +46,15 @@
       min-height: 100svh;
       overflow: hidden;
       background: var(--black);
+      isolation: isolate;
     }
 
     /*
-       CITY HALL IMAGE
+       CITY HALL PHOTOGRAPH
 
-       Image height: 91%.
-       Image anchored to bottom right.
-       Left edge fades into the background.
+       Height: 91% of hero.
+       Position: bottom right.
+       Gradient is applied separately above it.
     */
 
     .hero::before {
@@ -67,32 +68,41 @@
       background-position: right bottom;
 
       z-index: 0;
+    }
 
-      /* Safari and Chrome compatibility */
-      -webkit-mask-image: linear-gradient(
+    /*
+       LEFT-SIDE GRADIENT OVERLAY
+
+       Covers the photograph's visible left edge.
+       Gradually transitions from charcoal to
+       transparency toward the right.
+    */
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      background: linear-gradient(
         to right,
-        transparent 0%,
-        transparent 28%,
-        rgba(0,0,0,.08) 36%,
-        rgba(0,0,0,.35) 43%,
-        rgba(0,0,0,.75) 52%,
-        black 64%
+        #121111 0%,
+        #121111 30%,
+        rgba(18,17,17,1) 36%,
+        rgba(18,17,17,.98) 40%,
+        rgba(18,17,17,.90) 44%,
+        rgba(18,17,17,.70) 49%,
+        rgba(18,17,17,.40) 55%,
+        rgba(18,17,17,.10) 63%,
+        rgba(18,17,17,0) 72%
       );
 
-      mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        transparent 28%,
-        rgba(0,0,0,.08) 36%,
-        rgba(0,0,0,.35) 43%,
-        rgba(0,0,0,.75) 52%,
-        black 64%
-      );
+      z-index: 1;
+      pointer-events: none;
     }
 
     .wrap {
       position: relative;
-      z-index: 1;
+      z-index: 2;
       max-width: 1600px;
       margin: auto;
       padding: 0 4%;
@@ -184,7 +194,9 @@
       border-radius: 13px;
       font-weight: 700;
       font-size: 17px;
-      transition: transform .2s, background .2s;
+      transition:
+        transform .2s ease,
+        background .2s ease;
     }
 
     .btn:hover {
@@ -264,7 +276,7 @@
       border-radius: 16px;
       padding: 30px;
       margin-top: 30px;
-      transition: border-color .2s;
+      transition: border-color .2s ease;
     }
 
     .project:hover {
@@ -447,19 +459,14 @@
       .hero::before {
         background-size: auto 100%;
         background-position: 60% center;
+      }
 
-        -webkit-mask-image: linear-gradient(
+      .hero::after {
+        background: linear-gradient(
           to bottom,
-          rgba(0,0,0,.35) 0%,
-          rgba(0,0,0,.55) 45%,
-          transparent 100%
-        );
-
-        mask-image: linear-gradient(
-          to bottom,
-          rgba(0,0,0,.35) 0%,
-          rgba(0,0,0,.55) 45%,
-          transparent 100%
+          rgba(18,17,17,.65) 0%,
+          rgba(18,17,17,.80) 45%,
+          #121111 100%
         );
       }
 
