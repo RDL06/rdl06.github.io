@@ -14,7 +14,6 @@
       --black: #121111;
       --white: #f9f9f9;
       --lilac: #d485fc;
-      --headline-accent: #d485fc;
     }
 
     * {
@@ -47,48 +46,44 @@
       isolation: isolate;
     }
 
-    /* CITY HALL BACKGROUND IMAGE */
-
-    .hero-image {
+    .hero::before {
+      content: "";
       position: absolute;
+      z-index: -2;
       top: 0;
       right: 0;
       bottom: 0;
-      width: 64%;
-      z-index: -1;
+      width: 100%;
 
       background-image: url("city-hall-hero.png");
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: auto 94%;
       background-position: right bottom;
     }
 
-    /* SUBTLE LEFT-SIDE GRADIENT */
-
-    .hero-image::after {
+    .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      z-index: 1;
+      z-index: -1;
       pointer-events: none;
 
       background: linear-gradient(
-        to right,
+        90deg,
         #121111 0%,
-        rgba(18, 17, 17, 0.95) 5%,
-        rgba(18, 17, 17, 0.65) 15%,
-        rgba(18, 17, 17, 0.25) 25%,
-        rgba(18, 17, 17, 0) 35%
+        #121111 28%,
+        rgba(18,17,17,.98) 35%,
+        rgba(18,17,17,.75) 43%,
+        rgba(18,17,17,.20) 53%,
+        transparent 62%
       );
     }
 
-    /* MAIN PAGE CONTAINER */
-
     .wrap {
       position: relative;
-      z-index: 2;
+      z-index: 1;
       max-width: 1600px;
-      margin: 0 auto;
+      margin: auto;
       padding: 0 4%;
     }
 
@@ -104,18 +99,19 @@
     }
 
     .brand {
-      font-size: clamp(17px, 1.8vw, 27px);
+      font-size: clamp(16px, 2vw, 26px);
       font-weight: 800;
-      letter-spacing: -0.04em;
+      letter-spacing: -.04em;
     }
 
-    .brand span {
+    .brand span,
+    .accent {
       color: var(--lilac);
     }
 
     .links {
       display: flex;
-      gap: clamp(18px, 3vw, 45px);
+      gap: clamp(16px, 3vw, 46px);
       font-size: 13px;
     }
 
@@ -123,27 +119,25 @@
       color: var(--lilac);
     }
 
-    /* HERO TEXT CONTENT */
+    /* HERO CONTENT */
 
     .hero-content {
-      max-width: 900px;
-      padding: clamp(115px, 15vh, 175px) 0 130px;
+      max-width: 850px;
+      padding: clamp(115px, 15vh, 185px) 0 130px;
     }
 
     .eyebrow {
       color: var(--lilac);
-      font-size: clamp(13px, 1.4vw, 21px);
-      letter-spacing: 0.14em;
+      font-size: clamp(13px, 1.5vw, 21px);
+      letter-spacing: .14em;
       font-weight: 700;
-      margin: 0 0 26px;
+      margin: 0 0 25px;
     }
 
-    /* TWO-LINE HEADLINE */
-
     h1 {
-      font-size: clamp(44px, 4.5vw, 76px);
-      line-height: 1.08;
-      letter-spacing: -0.055em;
+      font-size: clamp(44px, 5vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -.05em;
       margin: 0 0 27px;
       font-weight: 800;
     }
@@ -153,19 +147,15 @@
       white-space: nowrap;
     }
 
-    .accent {
-      color: var(--headline-accent);
-    }
-
     .intro {
-      font-size: clamp(17px, 1.45vw, 22px);
+      font-size: clamp(17px, 1.5vw, 22px);
       line-height: 1.5;
       color: #d2cfd2;
-      max-width: 590px;
-      margin: 0 0 42px;
+      max-width: 640px;
+      margin: 0 0 40px;
     }
 
-    /* HERO BUTTONS */
+    /* BUTTONS */
 
     .actions {
       display: flex;
@@ -177,12 +167,12 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 57px;
-      padding: 0 28px;
+      min-height: 56px;
+      padding: 0 27px;
       border-radius: 12px;
       font-weight: 700;
       font-size: 16px;
-      transition: transform 0.2s, background 0.2s;
+      transition: transform .2s, background .2s;
     }
 
     .btn:hover {
@@ -196,21 +186,22 @@
 
     .secondary {
       border: 1px solid #aaa;
-      background: rgba(18, 17, 17, 0.35);
+      background: #12111155;
     }
 
-    /* PORTFOLIO SECTIONS */
+    /* GENERAL SECTIONS */
 
     .section {
       max-width: 1150px;
       margin: auto;
       padding: 110px 5%;
       border-top: 1px solid #383338;
+      scroll-margin-top: 30px;
     }
 
     .section h2 {
       font-size: clamp(32px, 4vw, 54px);
-      letter-spacing: -0.04em;
+      letter-spacing: -.04em;
       margin: 0 0 18px;
     }
 
@@ -232,12 +223,54 @@
 
     .project small {
       color: var(--lilac);
-      letter-spacing: 0.12em;
+      letter-spacing: .12em;
     }
 
     .project h3 {
       font-size: 26px;
       margin: 14px 0;
+    }
+
+    /* ABOUT ME - OPERATIONAL PHILOSOPHY */
+
+    #about .philosophy {
+      display: block;
+      width: 100%;
+      max-width: 760px;
+      margin: 42px 0 0;
+      padding: 12px 0 12px 24px;
+      border: none;
+      border-left: 3px solid var(--lilac);
+      text-align: left;
+    }
+
+    #about .philosophy-label {
+      display: block;
+      color: var(--lilac);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      line-height: 1.5;
+      text-transform: uppercase;
+      text-align: left;
+      margin: 0 0 16px;
+    }
+
+    #about .philosophy-quote {
+      display: block;
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: clamp(21px, 2vw, 28px);
+      font-style: italic;
+      font-weight: 500;
+      line-height: 1.5;
+      letter-spacing: -.02em;
+      text-align: left;
+      max-width: 700px;
+      margin: 0;
+      padding: 0;
+      border: none;
     }
 
     /* FOOTER */
@@ -249,23 +282,29 @@
       text-align: center;
     }
 
-    /* TABLET RESPONSIVENESS */
+    /* TABLET */
 
-    @media (max-width: 1050px) {
-      .hero-image {
-        width: 75%;
+    @media (max-width: 1100px) {
+      .hero::before {
+        background-size: auto 90%;
       }
 
-      .hero-content {
-        max-width: 720px;
+      .hero::after {
+        background: linear-gradient(
+          90deg,
+          #121111 0%,
+          rgba(18,17,17,.98) 25%,
+          rgba(18,17,17,.75) 45%,
+          transparent 75%
+        );
       }
 
       h1 {
-        font-size: clamp(39px, 5vw, 58px);
+        font-size: clamp(40px, 5.3vw, 65px);
       }
     }
 
-    /* MOBILE RESPONSIVENESS */
+    /* MOBILE */
 
     @media (max-width: 700px) {
       .nav {
@@ -282,19 +321,18 @@
         flex-wrap: wrap;
       }
 
-      .hero-image {
-        width: 100%;
-        opacity: 0.6;
-        background-size: contain;
-        background-position: center bottom;
+      .hero::before {
+        background-size: auto 80%;
+        background-position: 57% bottom;
       }
 
-      .hero-image::after {
+      .hero::after {
         background: linear-gradient(
-          to bottom,
-          rgba(18, 17, 17, 0.75) 0%,
-          rgba(18, 17, 17, 0.85) 45%,
-          rgba(18, 17, 17, 0.25) 100%
+          180deg,
+          rgba(18,17,17,.85) 0%,
+          rgba(18,17,17,.72) 45%,
+          rgba(18,17,17,.45) 75%,
+          #121111 100%
         );
       }
 
@@ -320,6 +358,16 @@
         padding-top: 75px;
         padding-bottom: 75px;
       }
+
+      #about .philosophy {
+        margin-top: 32px;
+        padding-left: 18px;
+      }
+
+      #about .philosophy-quote {
+        font-size: 21px;
+        line-height: 1.5;
+      }
     }
   </style>
 </head>
@@ -329,29 +377,20 @@
   <!-- HERO -->
 
   <header class="hero" id="home">
-
-    <div class="hero-image" aria-hidden="true"></div>
-
     <div class="wrap">
 
-      <!-- NAVIGATION -->
-
       <nav class="nav" aria-label="Main navigation">
-
         <a class="brand" href="#home">
           RIO EDWARD DE LEÓN<span>.</span>
         </a>
 
         <div class="links">
           <a href="#work">WORK</a>
-          <a href="#experience">EXPERIENCE</a>
           <a href="#about">ABOUT</a>
+          <a href="#experience">EXPERIENCE</a>
           <a href="#contact">CONTACT</a>
         </div>
-
       </nav>
-
-      <!-- HERO CONTENT -->
 
       <div class="hero-content">
 
@@ -360,21 +399,19 @@
         </p>
 
         <h1>
-          <span class="headline-line">
-            Making complex
-          </span>
+          <span class="headline-line">Making complex</span>
           <span class="headline-line">
             systems <span class="accent">work better.</span>
           </span>
         </h1>
 
         <p class="intro">
-          I turn operational challenges into smarter systems,
-          meaningful improvements, and measurable results.
+          I turn operational challenges into practical solutions
+          that improve efficiency, empower teams, and deliver
+          measurable results.
         </p>
 
         <div class="actions">
-
           <a class="btn primary" href="#work">
             Explore My Work ↗
           </a>
@@ -382,26 +419,19 @@
           <a class="btn secondary" href="#about">
             About Me
           </a>
-
         </div>
 
       </div>
-
     </div>
-
   </header>
-
-  <!-- MAIN CONTENT -->
 
   <main>
 
-    <!-- SELECTED WORK -->
+    <!-- WORK -->
 
     <section class="section" id="work">
 
-      <h2>
-        Selected <span class="accent">work.</span>
-      </h2>
+      <h2>Selected <span class="accent">work.</span></h2>
 
       <p>
         Practical solutions at the intersection of operations
@@ -409,7 +439,6 @@
       </p>
 
       <article class="project">
-
         <small>01 / AI AUTOMATION</small>
 
         <h3>AI-Powered Invoice Review</h3>
@@ -419,8 +448,35 @@
           invoice review, identify items needing attention,
           and prevent duplicate AI reviews.
         </p>
-
       </article>
+
+    </section>
+
+    <!-- ABOUT ME -->
+
+    <section class="section" id="about">
+
+      <h2>About <span class="accent">me.</span></h2>
+
+      <p>
+        I'm Rio Edward De León, a San Francisco-based operations
+        professional who enjoys making complicated systems easier
+        to navigate, more efficient, and more useful to the people
+        relying on them.
+      </p>
+
+      <div class="philosophy">
+
+        <div class="philosophy-label">
+          MY OPERATIONAL PHILOSOPHY
+        </div>
+
+        <blockquote class="philosophy-quote">
+          “Making something look easy often means doing the
+          hardest work behind the scenes.”
+        </blockquote>
+
+      </div>
 
     </section>
 
@@ -428,9 +484,7 @@
 
     <section class="section" id="experience">
 
-      <h2>
-        Experience<span class="accent">.</span>
-      </h2>
+      <h2>Experience<span class="accent">.</span></h2>
 
       <p>
         Business operations, financial workflows,
@@ -440,97 +494,26 @@
 
     </section>
 
-    <!-- ABOUT -->
-
-<section class="section" id="about">
-  <h2>About <span class="accent">me.</span></h2>
-
-  <p>
-    I'm Rio Edward De León, a San Francisco-based operations
-    professional who enjoys making complicated systems easier
-    to navigate, more efficient, and more useful to the people
-    relying on them.
-  </p>
-
- #about .philosophy {
-  display: block;
-  width: 100%;
-  max-width: 760px;
-  margin: 42px 0 0;
-  padding: 12px 0 12px 24px;
-  border: none;
-  border-left: 3px solid #D485FC;
-  text-align: left;
-}
-
-#about .philosophy-label {
-  display: block;
-  color: #D485FC;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1.5;
-  text-transform: uppercase;
-  text-align: left;
-  margin: 0 0 16px;
-}
-
-#about .philosophy-quote {
-  display: block;
-  color: #F9F9F9;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(21px, 2vw, 28px);
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: -0.02em;
-  text-align: left;
-  max-width: 700px;
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-  #about .philosophy {
-    margin-top: 32px;
-    padding-left: 18px;
-  }
-
-  #about .philosophy-quote {
-    font-size: 21px;
-    line-height: 1.5;
-  }
-}
-</section>
-
     <!-- CONTACT -->
 
     <section class="section" id="contact">
 
-      <h2>
-        Let's <span class="accent">connect.</span>
-      </h2>
+      <h2>Let's <span class="accent">connect.</span></h2>
 
       <p>
         Interested in collaborating or discussing opportunities?
         Find me on
         <a
-          style="color:var(--lilac);text-decoration:underline"
           href="https://github.com/RDL06"
           target="_blank"
           rel="noopener noreferrer"
+          style="color:var(--lilac);text-decoration:underline"
         >GitHub</a>.
       </p>
 
     </section>
 
   </main>
-
-  <!-- FOOTER -->
 
   <footer>
     © 2026 Rio Edward De León
