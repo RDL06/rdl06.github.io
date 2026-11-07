@@ -442,9 +442,7 @@
 
     <!-- ABOUT -->
 
-    
 <section class="section" id="about">
-
   <h2>About <span class="accent">me.</span></h2>
 
   <p>
@@ -454,15 +452,59 @@
     relying on them.
   </p>
 
-  <div class="philosophy">
-    <p class="philosophy-label">MY OPERATIONAL PHILOSOPHY</p>
+ #about .philosophy {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  margin: 42px 0 0;
+  padding: 12px 0 12px 24px;
+  border: none;
+  border-left: 3px solid #D485FC;
+  text-align: left;
+}
 
-    <blockquote class="philosophy-quote">
-      “Making something look easy often means doing the
-      hardest work behind the scenes.”
-    </blockquote>
-  </div>
+#about .philosophy-label {
+  display: block;
+  color: #D485FC;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+  text-align: left;
+  margin: 0 0 16px;
+}
 
+#about .philosophy-quote {
+  display: block;
+  color: #F9F9F9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(21px, 2vw, 28px);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: left;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  #about .philosophy {
+    margin-top: 32px;
+    padding-left: 18px;
+  }
+
+  #about .philosophy-quote {
+    font-size: 21px;
+    line-height: 1.5;
+  }
+}
 </section>
 
     <!-- CONTACT -->
