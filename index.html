@@ -471,6 +471,71 @@ footer {
     row-gap: 22px;
   }
 }
+  
+/* EXPERIENCE DROPDOWN */
+
+.experience-dropdown {
+  overflow: hidden;
+}
+
+.experience-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  cursor: pointer;
+  list-style: none;
+  outline-offset: 5px;
+}
+
+.experience-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.experience-toggle::marker {
+  content: "";
+}
+
+.experience-toggle-info h3 {
+  margin: 10px 0 5px;
+  color: #f9f9f9;
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.experience-toggle-info p {
+  margin: 0;
+  color: #c6c0c6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.experience-arrow {
+  flex-shrink: 0;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #d485fc;
+  border-bottom: 2px solid #d485fc;
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+}
+
+.experience-dropdown[open] .experience-arrow {
+  transform: rotate(225deg);
+}
+
+.experience-toggle:hover h3 {
+  color: #d485fc;
+}
+
+.experience-dropdown .experience-intro {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid #403a40;
+}
+
+.experience-dropdown .experience-intro > h3 {
+  display: none;
+}
 </style>
 </head>
 
@@ -734,7 +799,7 @@ footer {
       </p>
     </div>
 
-  </div>
+  </details>
 </section>
 
 <!-- CONTACT -->
