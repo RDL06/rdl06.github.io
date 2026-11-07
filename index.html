@@ -4,8 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="description"
-    content="Rio Edward De León — Business Operations, Strategy, and AI Automation portfolio.">
+  <meta name="description" content="Rio Edward De León — Business Operations, Strategy, and AI Automation portfolio.">
 
   <title>Rio Edward De León | Business Operations & AI</title>
 
@@ -13,7 +12,7 @@
     :root {
       --black: #121111;
       --white: #f9f9f9;
-      --lilac: #d485fc;
+      --purple: #d485fc;
     }
 
     * {
@@ -43,40 +42,35 @@
       min-height: 100svh;
       overflow: hidden;
       background: var(--black);
-      isolation: isolate;
     }
 
     .hero::before {
       content: "";
       position: absolute;
-      z-index: -2;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-
-      background-image: url("city-hall-hero.png");
-      background-repeat: no-repeat;
-      background-size: auto 94%;
-      background-position: right bottom;
-    }
-
-    .hero::after {
-      content: "";
-      position: absolute;
       inset: 0;
-      z-index: -1;
-      pointer-events: none;
 
-      background: linear-gradient(
-        90deg,
-        #121111 0%,
-        #121111 28%,
-        rgba(18,17,17,.98) 35%,
-        rgba(18,17,17,.75) 43%,
-        rgba(18,17,17,.20) 53%,
-        transparent 62%
-      );
+      background-image:
+        linear-gradient(
+          90deg,
+          #121111 0%,
+          #121111 28%,
+          rgba(18,17,17,.96) 35%,
+          rgba(18,17,17,.65) 43%,
+          rgba(18,17,17,0) 58%
+        ),
+        url('city-hall-hero.png');
+
+      background-size:
+        100% 100%,
+        auto 100%;
+
+      background-repeat: no-repeat;
+
+      background-position:
+        center,
+        right center;
+
+      z-index: 0;
     }
 
     .wrap {
@@ -90,7 +84,7 @@
     /* NAVIGATION */
 
     .nav {
-      min-height: 66px;
+      min-height: 80px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -99,60 +93,55 @@
     }
 
     .brand {
-      font-size: clamp(16px, 2vw, 26px);
+      font-size: clamp(16px, 2vw, 28px);
       font-weight: 800;
       letter-spacing: -.04em;
     }
 
     .brand span,
     .accent {
-      color: var(--lilac);
+      color: var(--purple);
     }
 
     .links {
       display: flex;
       gap: clamp(16px, 3vw, 46px);
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .links a:hover {
-      color: var(--lilac);
+      color: var(--purple);
     }
 
     /* HERO CONTENT */
 
     .hero-content {
       max-width: 850px;
-      padding: clamp(115px, 15vh, 185px) 0 130px;
+      padding: clamp(105px, 15vh, 190px) 0 150px;
     }
 
     .eyebrow {
-      color: var(--lilac);
-      font-size: clamp(13px, 1.5vw, 21px);
+      color: var(--purple);
+      font-size: clamp(13px, 1.5vw, 22px);
       letter-spacing: .14em;
       font-weight: 700;
-      margin: 0 0 25px;
+      margin: 0 0 24px;
     }
 
     h1 {
-      font-size: clamp(44px, 5vw, 76px);
-      line-height: 1.06;
+      font-size: clamp(44px, 5.2vw, 80px);
+      line-height: 1.05;
       letter-spacing: -.05em;
-      margin: 0 0 27px;
+      margin: 0 0 26px;
       font-weight: 800;
     }
 
-    .headline-line {
-      display: block;
-      white-space: nowrap;
-    }
-
     .intro {
-      font-size: clamp(17px, 1.5vw, 22px);
-      line-height: 1.5;
+      font-size: clamp(17px, 1.65vw, 24px);
+      line-height: 1.45;
       color: #d2cfd2;
       max-width: 640px;
-      margin: 0 0 40px;
+      margin: 0 0 42px;
     }
 
     /* BUTTONS */
@@ -167,11 +156,11 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 56px;
-      padding: 0 27px;
-      border-radius: 12px;
+      min-height: 60px;
+      padding: 0 30px;
+      border-radius: 13px;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 17px;
       transition: transform .2s, background .2s;
     }
 
@@ -180,7 +169,7 @@
     }
 
     .primary {
-      background: var(--lilac);
+      background: var(--purple);
       color: var(--black);
     }
 
@@ -189,14 +178,13 @@
       background: #12111155;
     }
 
-    /* GENERAL SECTIONS */
+    /* MAIN SECTIONS */
 
     .section {
       max-width: 1150px;
       margin: auto;
       padding: 110px 5%;
       border-top: 1px solid #383338;
-      scroll-margin-top: 30px;
     }
 
     .section h2 {
@@ -212,6 +200,33 @@
       max-width: 760px;
     }
 
+    /* ABOUT ME PHILOSOPHY */
+
+    .philosophy {
+      margin-top: 32px;
+      padding: 8px 0 8px 24px;
+      border-left: 3px solid var(--purple);
+      max-width: 800px;
+    }
+
+    .philosophy-label {
+      color: var(--purple);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .philosophy blockquote {
+      margin: 0;
+      color: var(--white);
+      font-size: clamp(19px, 2vw, 25px);
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
     /* PROJECT CARDS */
 
     .project {
@@ -219,58 +234,21 @@
       border-radius: 16px;
       padding: 30px;
       margin-top: 30px;
+      transition: border-color .2s;
+    }
+
+    .project:hover {
+      border-color: var(--purple);
     }
 
     .project small {
-      color: var(--lilac);
+      color: var(--purple);
       letter-spacing: .12em;
     }
 
     .project h3 {
       font-size: 26px;
       margin: 14px 0;
-    }
-
-    /* ABOUT ME - OPERATIONAL PHILOSOPHY */
-
-    #about .philosophy {
-      display: block;
-      width: 100%;
-      max-width: 760px;
-      margin: 42px 0 0;
-      padding: 12px 0 12px 24px;
-      border: none;
-      border-left: 3px solid var(--lilac);
-      text-align: left;
-    }
-
-    #about .philosophy-label {
-      display: block;
-      color: var(--lilac);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: .12em;
-      line-height: 1.5;
-      text-transform: uppercase;
-      text-align: left;
-      margin: 0 0 16px;
-    }
-
-    #about .philosophy-quote {
-      display: block;
-      color: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: clamp(21px, 2vw, 28px);
-      font-style: italic;
-      font-weight: 500;
-      line-height: 1.5;
-      letter-spacing: -.02em;
-      text-align: left;
-      max-width: 700px;
-      margin: 0;
-      padding: 0;
-      border: none;
     }
 
     /* FOOTER */
@@ -282,31 +260,10 @@
       text-align: center;
     }
 
-    /* TABLET */
-
-    @media (max-width: 1100px) {
-      .hero::before {
-        background-size: auto 90%;
-      }
-
-      .hero::after {
-        background: linear-gradient(
-          90deg,
-          #121111 0%,
-          rgba(18,17,17,.98) 25%,
-          rgba(18,17,17,.75) 45%,
-          transparent 75%
-        );
-      }
-
-      h1 {
-        font-size: clamp(40px, 5.3vw, 65px);
-      }
-    }
-
     /* MOBILE */
 
     @media (max-width: 700px) {
+
       .nav {
         min-height: 74px;
         align-items: flex-start;
@@ -322,30 +279,26 @@
       }
 
       .hero::before {
-        background-size: auto 80%;
-        background-position: 57% bottom;
-      }
+        background-image:
+          linear-gradient(
+            180deg,
+            rgba(18,17,17,.65),
+            rgba(18,17,17,.80) 45%,
+            #121111 100%
+          ),
+          url('city-hall-hero.png');
 
-      .hero::after {
-        background: linear-gradient(
-          180deg,
-          rgba(18,17,17,.85) 0%,
-          rgba(18,17,17,.72) 45%,
-          rgba(18,17,17,.45) 75%,
-          #121111 100%
-        );
+        background-size:
+          100% 100%,
+          auto 100%;
+
+        background-position:
+          center,
+          60% center;
       }
 
       .hero-content {
         padding: 100px 0 130px;
-      }
-
-      h1 {
-        font-size: clamp(36px, 8vw, 50px);
-      }
-
-      .headline-line {
-        white-space: normal;
       }
 
       .btn {
@@ -359,14 +312,8 @@
         padding-bottom: 75px;
       }
 
-      #about .philosophy {
-        margin-top: 32px;
+      .philosophy {
         padding-left: 18px;
-      }
-
-      #about .philosophy-quote {
-        font-size: 21px;
-        line-height: 1.5;
       }
     }
   </style>
@@ -374,22 +321,25 @@
 
 <body>
 
-  <!-- HERO -->
+  <!-- HOME -->
 
   <header class="hero" id="home">
+
     <div class="wrap">
 
       <nav class="nav" aria-label="Main navigation">
+
         <a class="brand" href="#home">
           RIO EDWARD DE LEÓN<span>.</span>
         </a>
 
         <div class="links">
-          <a href="#work">WORK</a>
           <a href="#about">ABOUT</a>
+          <a href="#work">WORK</a>
           <a href="#experience">EXPERIENCE</a>
           <a href="#contact">CONTACT</a>
         </div>
+
       </nav>
 
       <div class="hero-content">
@@ -399,19 +349,17 @@
         </p>
 
         <h1>
-          <span class="headline-line">Making complex</span>
-          <span class="headline-line">
-            systems <span class="accent">work better.</span>
-          </span>
+          Making complex<br>
+          systems <span class="accent">work better.</span>
         </h1>
 
         <p class="intro">
-          I turn operational challenges into practical solutions
-          that improve efficiency, empower teams, and deliver
-          measurable results.
+          I turn operational challenges into smarter systems,
+          meaningful improvements, and measurable results.
         </p>
 
         <div class="actions">
+
           <a class="btn primary" href="#work">
             Explore My Work ↗
           </a>
@@ -419,50 +367,30 @@
           <a class="btn secondary" href="#about">
             About Me
           </a>
+
         </div>
 
       </div>
+
     </div>
+
   </header>
 
   <main>
 
-    <!-- WORK -->
-
-    <section class="section" id="work">
-
-      <h2>Selected <span class="accent">work.</span></h2>
-
-      <p>
-        Practical solutions at the intersection of operations
-        and emerging technology.
-      </p>
-
-      <article class="project">
-        <small>01 / AI AUTOMATION</small>
-
-        <h3>AI-Powered Invoice Review</h3>
-
-        <p>
-          A workflow using n8n and Google Sheets to streamline
-          invoice review, identify items needing attention,
-          and prevent duplicate AI reviews.
-        </p>
-      </article>
-
-    </section>
-
-    <!-- ABOUT ME -->
+    <!-- 01 ABOUT ME -->
 
     <section class="section" id="about">
 
-      <h2>About <span class="accent">me.</span></h2>
+      <h2>
+        About <span class="accent">me.</span>
+      </h2>
 
       <p>
-        I'm Rio Edward De León, a San Francisco-based operations
-        professional who enjoys making complicated systems easier
-        to navigate, more efficient, and more useful to the people
-        relying on them.
+        I'm Rio Edward De León, a San Francisco-based
+        operations professional who enjoys making complicated
+        systems easier to navigate, more efficient, and more
+        useful to the people relying on them.
       </p>
 
       <div class="philosophy">
@@ -471,7 +399,7 @@
           MY OPERATIONAL PHILOSOPHY
         </div>
 
-        <blockquote class="philosophy-quote">
+        <blockquote>
           “Making something look easy often means doing the
           hardest work behind the scenes.”
         </blockquote>
@@ -480,35 +408,75 @@
 
     </section>
 
-    <!-- EXPERIENCE -->
+    <!-- 02 SELECTED WORK -->
+
+    <section class="section" id="work">
+
+      <h2>
+        Selected <span class="accent">work.</span>
+      </h2>
+
+      <p>
+        Practical solutions at the intersection of
+        operations and emerging technology.
+      </p>
+
+      <article class="project">
+
+        <small>01 / AI AUTOMATION</small>
+
+        <h3>
+          AI-Powered Invoice Review
+        </h3>
+
+        <p>
+          A workflow using n8n and Google Sheets to
+          streamline invoice review, identify items
+          needing attention, and prevent duplicate
+          AI reviews.
+        </p>
+
+      </article>
+
+    </section>
+
+    <!-- 03 EXPERIENCE -->
 
     <section class="section" id="experience">
 
-      <h2>Experience<span class="accent">.</span></h2>
+      <h2>
+        Experience<span class="accent">.</span>
+      </h2>
 
       <p>
         Business operations, financial workflows,
-        cross-functional coordination, and process improvement.
-        Detailed career highlights coming soon.
+        cross-functional coordination, and process
+        improvement. Detailed career highlights
+        coming soon.
       </p>
 
     </section>
 
-    <!-- CONTACT -->
+    <!-- 04 CONTACT -->
 
     <section class="section" id="contact">
 
-      <h2>Let's <span class="accent">connect.</span></h2>
+      <h2>
+        Let's <span class="accent">connect.</span>
+      </h2>
 
       <p>
-        Interested in collaborating or discussing opportunities?
-        Find me on
+        Interested in collaborating or discussing
+        opportunities? Find me on
+
         <a
           href="https://github.com/RDL06"
           target="_blank"
           rel="noopener noreferrer"
-          style="color:var(--lilac);text-decoration:underline"
-        >GitHub</a>.
+          style="color:var(--purple);text-decoration:underline;"
+        >
+          GitHub
+        </a>.
       </p>
 
     </section>
