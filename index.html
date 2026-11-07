@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -15,7 +14,7 @@
       --black: #121111;
       --white: #f9f9f9;
       --lilac: #d485fc;
-      --headline-accent: #e78bee;
+      --headline-accent: #d485fc;
     }
 
     * {
@@ -38,7 +37,7 @@
       text-decoration: none;
     }
 
-    /* HERO */
+    /* HERO SECTION */
 
     .hero {
       position: relative;
@@ -48,7 +47,7 @@
       isolation: isolate;
     }
 
-    /* CITY HALL IMAGE */
+    /* CITY HALL BACKGROUND IMAGE */
 
     .hero-image {
       position: absolute;
@@ -64,7 +63,7 @@
       background-position: right bottom;
     }
 
-    /* LEFT-SIDE GRADIENT */
+    /* SUBTLE LEFT-SIDE GRADIENT */
 
     .hero-image::after {
       content: "";
@@ -83,12 +82,12 @@
       );
     }
 
-    /* PAGE CONTAINER */
+    /* MAIN PAGE CONTAINER */
 
     .wrap {
       position: relative;
       z-index: 2;
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
       padding: 0 4%;
     }
@@ -124,10 +123,10 @@
       color: var(--lilac);
     }
 
-    /* HERO CONTENT */
+    /* HERO TEXT CONTENT */
 
     .hero-content {
-      max-width: 820px;
+      max-width: 900px;
       padding: clamp(115px, 15vh, 175px) 0 130px;
     }
 
@@ -142,7 +141,7 @@
     /* TWO-LINE HEADLINE */
 
     h1 {
-      font-size: clamp(42px, 4.5vw, 72px);
+      font-size: clamp(44px, 4.5vw, 76px);
       line-height: 1.08;
       letter-spacing: -0.055em;
       margin: 0 0 27px;
@@ -166,7 +165,7 @@
       margin: 0 0 42px;
     }
 
-    /* BUTTONS */
+    /* HERO BUTTONS */
 
     .actions {
       display: flex;
@@ -200,7 +199,7 @@
       background: rgba(18, 17, 17, 0.35);
     }
 
-    /* LOWER SECTIONS */
+    /* PORTFOLIO SECTIONS */
 
     .section {
       max-width: 1150px;
@@ -222,6 +221,8 @@
       max-width: 760px;
     }
 
+    /* PROJECT CARDS */
+
     .project {
       border: 1px solid #403a40;
       border-radius: 16px;
@@ -239,6 +240,8 @@
       margin: 14px 0;
     }
 
+    /* FOOTER */
+
     footer {
       padding: 35px 5%;
       border-top: 1px solid #383338;
@@ -246,7 +249,7 @@
       text-align: center;
     }
 
-    /* TABLET */
+    /* TABLET RESPONSIVENESS */
 
     @media (max-width: 1050px) {
       .hero-image {
@@ -262,7 +265,7 @@
       }
     }
 
-    /* MOBILE */
+    /* MOBILE RESPONSIVENESS */
 
     @media (max-width: 700px) {
       .nav {
@@ -323,11 +326,15 @@
 
 <body>
 
+  <!-- HERO -->
+
   <header class="hero" id="home">
 
     <div class="hero-image" aria-hidden="true"></div>
 
     <div class="wrap">
+
+      <!-- NAVIGATION -->
 
       <nav class="nav" aria-label="Main navigation">
 
@@ -343,6 +350,8 @@
         </div>
 
       </nav>
+
+      <!-- HERO CONTENT -->
 
       <div class="hero-content">
 
@@ -365,6 +374,7 @@
         </p>
 
         <div class="actions">
+
           <a class="btn primary" href="#work">
             Explore My Work ↗
           </a>
@@ -372,16 +382,26 @@
           <a class="btn secondary" href="#about">
             About Me
           </a>
+
         </div>
 
       </div>
+
     </div>
+
   </header>
+
+  <!-- MAIN CONTENT -->
 
   <main>
 
+    <!-- SELECTED WORK -->
+
     <section class="section" id="work">
-      <h2>Selected <span class="accent">work.</span></h2>
+
+      <h2>
+        Selected <span class="accent">work.</span>
+      </h2>
 
       <p>
         Practical solutions at the intersection of operations
@@ -389,6 +409,7 @@
       </p>
 
       <article class="project">
+
         <small>01 / AI AUTOMATION</small>
 
         <h3>AI-Powered Invoice Review</h3>
@@ -398,21 +419,34 @@
           invoice review, identify items needing attention,
           and prevent duplicate AI reviews.
         </p>
+
       </article>
+
     </section>
 
+    <!-- EXPERIENCE -->
+
     <section class="section" id="experience">
-      <h2>Experience<span class="accent">.</span></h2>
+
+      <h2>
+        Experience<span class="accent">.</span>
+      </h2>
 
       <p>
         Business operations, financial workflows,
         cross-functional coordination, and process improvement.
         Detailed career highlights coming soon.
       </p>
+
     </section>
 
+    <!-- ABOUT -->
+
     <section class="section" id="about">
-      <h2>About <span class="accent">me.</span></h2>
+
+      <h2>
+        About <span class="accent">me.</span>
+      </h2>
 
       <p>
         I'm Rio Edward De León, a San Francisco-based operations
@@ -420,10 +454,16 @@
         to navigate, more efficient, and more useful to the people
         relying on them.
       </p>
+
     </section>
 
+    <!-- CONTACT -->
+
     <section class="section" id="contact">
-      <h2>Let's <span class="accent">connect.</span></h2>
+
+      <h2>
+        Let's <span class="accent">connect.</span>
+      </h2>
 
       <p>
         Interested in collaborating or discussing opportunities?
@@ -435,9 +475,12 @@
           rel="noopener noreferrer"
         >GitHub</a>.
       </p>
+
     </section>
 
   </main>
+
+  <!-- FOOTER -->
 
   <footer>
     © 2026 Rio Edward De León
