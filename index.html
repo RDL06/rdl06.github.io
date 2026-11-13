@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Rio Edward De León — Business Operations, Strategy, and AI Automation portfolio.">
-<title>Rio Edward De León | Business Operations & AI</title>
+<meta name="description" content="Rio Edward De León — Executive Operations, Business Operations, Strategic Execution, and AI Automation portfolio.">
+<title>Rio Edward De León | Executive & Business Operations</title>
 
 <style>
 :root {
@@ -15,7 +15,6 @@
 }
 
 * { box-sizing: border-box; }
-
 html { scroll-behavior: smooth; }
 
 body {
@@ -132,6 +131,11 @@ h1 {
   font-weight: 800;
 }
 
+.hero-second-line {
+  display: block;
+  white-space: nowrap;
+}
+
 .intro {
   font-size: clamp(17px, 1.65vw, 24px);
   line-height: 1.45;
@@ -194,7 +198,7 @@ h1 {
   max-width: 760px;
 }
 
-/* ABOUT */
+/* ABOUT ME */
 
 .philosophy {
   border-left: 3px solid var(--purple);
@@ -215,6 +219,29 @@ h1 {
   font-style: italic;
   font-weight: 700;
   line-height: 1.45;
+}
+
+/* EXECUTIVE PARTNERSHIP HIGHLIGHT */
+
+.partnership-highlight {
+  margin-top: 36px;
+  padding: 28px 30px;
+  border: 1px solid #403a40;
+  border-radius: 16px;
+  background: #191619;
+}
+
+.partnership-highlight h3 {
+  margin: 10px 0 15px;
+  font-size: clamp(20px, 2.4vw, 27px);
+  letter-spacing: -.025em;
+}
+
+.partnership-highlight p {
+  margin: 12px 0 0;
+  color: #d8d3d8;
+  font-size: 16px;
+  line-height: 1.75;
 }
 
 /* SELECTED WORK */
@@ -328,137 +355,6 @@ h1 {
   margin-top: 12px;
 }
 
-/* CONTACT */
-
-.contact-actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 30px 0 22px;
-}
-
-.contact-email {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  color: #c6c0c6;
-}
-
-.copy-btn {
-  cursor: pointer;
-  color: var(--purple);
-  border: 1px solid #65516c;
-  border-radius: 8px;
-  background: transparent;
-  padding: 7px 12px;
-}
-
-.copy-btn:hover {
-  background: #302038;
-}
-
-footer {
-  padding: 35px 5%;
-  border-top: 1px solid #383338;
-  color: #bbb;
-  text-align: center;
-}
-
-/* MOBILE */
-
-@media (max-width: 700px) {
-  .nav {
-    min-height: 74px;
-    align-items: flex-start;
-    flex-direction: column;
-    justify-content: center;
-    padding: 14px 0;
-  }
-
-  .links {
-    font-size: 11px;
-    gap: 18px;
-    flex-wrap: wrap;
-  }
-
-  .hero::before {
-    background-size: auto 100%;
-    background-position: 60% center;
-  }
-
-  .hero::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(18,17,17,.65) 0%,
-      rgba(18,17,17,.80) 45%,
-      #121111 100%
-    );
-  }
-
-  .hero-content {
-    padding: 100px 0 130px;
-  }
-
-  .btn {
-    min-height: 52px;
-    font-size: 15px;
-    padding: 0 20px;
-  }
-
-  .section {
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-
-  .experience-card {
-    margin-top: 26px;
-    padding: 24px 20px;
-    border-radius: 14px;
-  }
-
-  .experience-eyebrow {
-    font-size: 10px;
-    letter-spacing: 1.1px;
-  }
-
-  .experience-summary {
-    font-size: 15px;
-  }
-
-  .experience-story,
-  .experience-additional {
-    margin-top: 28px;
-    padding-top: 28px;
-  }
-
-  .experience-metrics {
-    gap: 14px;
-  }
-
-  .experience-metric strong {
-    font-size: clamp(24px, 6vw, 34px);
-    letter-spacing: -.8px;
-  }
-
-  .experience-metric span {
-    font-size: 11px;
-  }
-
-  .experience-story p,
-  .experience-additional p {
-    font-size: 14px;
-    line-height: 1.75;
-  }
-}
-
-@media (max-width: 380px) {
-  .experience-metrics {
-    grid-template-columns: 1fr 1fr;
-    row-gap: 22px;
-  }
-}
-  
 /* EXPERIENCE DROPDOWN */
 
 .experience-dropdown {
@@ -518,31 +414,163 @@ footer {
   margin-top: 28px;
   padding-top: 28px;
   border-top: 1px solid #403a40;
-}  
-/* EXPERIENCE CARD SPACING */
+}
+
 .experience-section .experience-card + .experience-card {
   margin-top: 20px;
 }
 
-/* HERO HEADLINE: TWO LINES */
-.hero-second-line {
-  display: block;
-  white-space: nowrap;
+/* CONTACT */
+
+.contact-actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0 22px;
 }
 
-/* MOBILE HERO HEADLINE */
-@media (max-width: 700px) {
-  .hero h1 {
-    font-size: clamp(30px, 7.5vw, 52px);
-    letter-spacing: -1.5px;
-  }
+.contact-email {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: #c6c0c6;
 }
-  /* ACCESSIBILITY: KEYBOARD FOCUS */
+
+.copy-btn {
+  cursor: pointer;
+  color: var(--purple);
+  border: 1px solid #65516c;
+  border-radius: 8px;
+  background: transparent;
+  padding: 7px 12px;
+}
+
+.copy-btn:hover {
+  background: #302038;
+}
+
+footer {
+  padding: 35px 5%;
+  border-top: 1px solid #383338;
+  color: #bbb;
+  text-align: center;
+}
+
+/* ACCESSIBILITY */
+
 .experience-toggle:focus-visible,
 a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--purple);
   outline-offset: 5px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .nav {
+    min-height: 74px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14px 0;
+  }
+
+  .links {
+    font-size: 11px;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  .hero::before {
+    background-size: auto 100%;
+    background-position: 60% center;
+  }
+
+  .hero::after {
+    background: linear-gradient(
+      to bottom,
+      rgba(18,17,17,.65) 0%,
+      rgba(18,17,17,.80) 45%,
+      #121111 100%
+    );
+  }
+
+  .hero-content {
+    padding: 100px 0 130px;
+  }
+
+  .hero h1 {
+    font-size: clamp(30px, 7.5vw, 52px);
+    letter-spacing: -1.5px;
+  }
+
+  .btn {
+    min-height: 52px;
+    font-size: 15px;
+    padding: 0 20px;
+  }
+
+  .section {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+
+  .partnership-highlight {
+    padding: 22px 20px;
+  }
+
+  .partnership-highlight p {
+    font-size: 15px;
+  }
+
+  .experience-card {
+    margin-top: 26px;
+    padding: 24px 20px;
+    border-radius: 14px;
+  }
+
+  .experience-eyebrow {
+    font-size: 10px;
+    letter-spacing: 1.1px;
+  }
+
+  .experience-summary {
+    font-size: 15px;
+  }
+
+  .experience-story,
+  .experience-additional {
+    margin-top: 28px;
+    padding-top: 28px;
+  }
+
+  .experience-metrics {
+    gap: 14px;
+  }
+
+  .experience-metric strong {
+    font-size: clamp(24px, 6vw, 34px);
+    letter-spacing: -.8px;
+  }
+
+  .experience-metric span {
+    font-size: 11px;
+  }
+
+  .experience-story p,
+  .experience-additional p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 380px) {
+  .experience-metrics {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 22px;
+  }
 }
 </style>
 </head>
@@ -568,18 +596,18 @@ button:focus-visible {
 
     <div class="hero-content">
       <p class="eyebrow">
-        BUSINESS OPERATIONS / STRATEGY / AI
+        EXECUTIVE OPERATIONS / BUSINESS OPERATIONS / AI
       </p>
 
       <h1>
-  Making complex<br>
-  <span class="hero-second-line">
-    systems <span class="accent">work better.</span>
-  </span>
-</h1>
+        Making complex<br>
+        <span class="hero-second-line">
+          systems <span class="accent">work better.</span>
+        </span>
+      </h1>
+
       <p class="intro">
-        I turn operational challenges into smarter systems,
-        meaningful improvements, and measurable results.
+        Executive Operations · Business Operations · Strategic Execution · AI Automation
       </p>
 
       <div class="actions">
@@ -596,16 +624,24 @@ button:focus-visible {
 
 <main>
 
-<!-- ABOUT -->
+<!-- ABOUT ME -->
 
 <section class="section" id="about">
   <h2>About <span class="accent">me.</span></h2>
 
   <p>
-    I'm Rio Edward De León, a San Francisco-based operations
-    professional who enjoys making complicated systems easier
-    to navigate, more efficient, and more useful to the people
-    relying on them.
+    I'm Rio Edward De León, an executive operations and business management
+    professional with 10+ years of experience helping leaders navigate
+    complexity, execute high-priority initiatives, and build systems that
+    make organizations more effective.
+  </p>
+
+  <p>
+    My experience spans direct Founder and CEO support, financial operations,
+    cross-functional leadership, and large-scale event production. I bring
+    strategic thinking and hands-on execution together, whether coordinating
+    executive priorities, improving operational processes, or developing
+    technology-enabled solutions.
   </p>
 
   <div class="philosophy">
@@ -617,6 +653,28 @@ button:focus-visible {
       “Making something look easy often means doing
       the hardest work behind the scenes.”
     </blockquote>
+  </div>
+
+  <!-- EXECUTIVE PARTNERSHIP -->
+
+  <div class="partnership-highlight">
+    <div class="experience-eyebrow">
+      EXECUTIVE PARTNERSHIP
+    </div>
+
+    <h3>Trusted support. Independent execution.</h3>
+
+    <p>
+      At Absolute Live Productions, I supported the Founder and CEO through
+      confidential calendar management, executive meetings, travel arrangements,
+      expenses, and coordination with film production partners.
+    </p>
+
+    <p>
+      At Access Institute for Psychological Services, I partnered directly with
+      the Executive Director on organizational priorities, executive and Board
+      reporting, cross-functional initiatives, and high-visibility events.
+    </p>
   </div>
 </section>
 
@@ -633,6 +691,7 @@ button:focus-visible {
   <article class="project">
     <small>01 / AI AUTOMATION</small>
     <h3>AI-Powered Invoice Review</h3>
+
     <p>
       A workflow using n8n and Google Sheets to streamline
       invoice review, identify items needing attention,
@@ -646,35 +705,36 @@ button:focus-visible {
 <section class="section experience-section" id="experience">
   <h2>Experience<span class="accent">.</span></h2>
 
-  
-<details class="experience-card experience-dropdown">
+  <!-- ACCESS INSTITUTE -->
 
-  <summary class="experience-toggle">
-    <div class="experience-toggle-info">
-      <div class="experience-eyebrow">
-        BUSINESS OPERATIONS · DEVELOPMENT · MARKETING
+  <details class="experience-card experience-dropdown">
+    <summary class="experience-toggle">
+      <div class="experience-toggle-info">
+        <div class="experience-eyebrow">
+          BUSINESS OPERATIONS · DEVELOPMENT · MARKETING
+        </div>
+
+        <h3>Business &amp; Development Manager</h3>
+
+        <p>
+          Access Institute for Psychological Services ·
+          San Francisco · 2024–2026
+        </p>
       </div>
 
-      <h3>Business &amp; Development Manager</h3>
+      <span class="experience-arrow" aria-hidden="true"></span>
+    </summary>
 
-      <p>
-        Access Institute for Psychological Services ·
-        San Francisco · 2024–2026
+    <div class="experience-intro">
+      <p class="experience-summary">
+        Led cross-functional operations spanning financial
+        management, fundraising strategy, marketing,
+        communications, and major event production,
+        identifying opportunities to improve processes
+        and strengthen organizational performance.
       </p>
     </div>
 
-    <span class="experience-arrow" aria-hidden="true"></span>
-  </summary>
-
-  <div class="experience-intro">
-    <p class="experience-summary">
-      Led cross-functional operations spanning financial
-      management, fundraising strategy, marketing,
-      communications, and major event production,
-      identifying opportunities to improve processes
-      and strengthen organizational performance.
-    </p>
-  </div>  
     <!-- YEAR-END GIVING -->
 
     <div class="experience-story">
@@ -760,7 +820,7 @@ button:focus-visible {
 
       <div class="experience-metrics experience-metrics-two">
         <div class="experience-metric">
-          <strong>~20%</strong>
+          <strong>80%</strong>
           <span>Reduction in outstanding balances</span>
         </div>
 
@@ -778,8 +838,8 @@ button:focus-visible {
         Consolidated workflows, standardized financial
         entries, corrected missing and misapplied
         payments, and improved reconciliation practices,
-        contributing to an approximately 20% reduction
-        in outstanding balances.
+        reducing outstanding balances from $6K to $1.2K,
+        an 80% reduction.
       </p>
     </div>
 
@@ -799,214 +859,223 @@ button:focus-visible {
       </p>
     </div>
   </details>
-  <!-- MARIN MAZDA EXPERIENCE -->
-<details class="experience-card experience-dropdown">
 
-  <summary class="experience-toggle">
-    <div class="experience-toggle-info">
-      <div class="experience-eyebrow">
-        BUSINESS OPERATIONS · FINANCIAL MANAGEMENT · PROCESS IMPROVEMENT
+  <!-- MARIN MAZDA -->
+
+  <details class="experience-card experience-dropdown">
+    <summary class="experience-toggle">
+      <div class="experience-toggle-info">
+        <div class="experience-eyebrow">
+          BUSINESS OPERATIONS · FINANCIAL MANAGEMENT · PROCESS IMPROVEMENT
+        </div>
+
+        <h3>Business Office Manager</h3>
+
+        <p>
+          Marin Mazda · San Rafael, CA · 2021 – 2023
+        </p>
       </div>
 
-      <h3>Business Office Manager</h3>
+      <span class="experience-arrow" aria-hidden="true"></span>
+    </summary>
 
-      <p>
-        Marin Mazda · San Rafael, CA · 2021 – 2023
+    <div class="experience-intro">
+      <p class="experience-summary">
+        Managed dealership business operations spanning financial
+        administration, inventory management, team leadership,
+        and cross-department coordination, introducing systems
+        and process improvements to strengthen operational
+        efficiency and accountability.
       </p>
     </div>
 
-    <span class="experience-arrow" aria-hidden="true"></span>
-  </summary>
-
-  <div class="experience-intro">
-    <p class="experience-summary">
-      Managed dealership business operations spanning financial
-      administration, inventory management, team leadership,
-      and cross-department coordination, introducing systems
-      and process improvements to strengthen operational
-      efficiency and accountability.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      01 / DIGITAL TRANSFORMATION &amp; PROCESS IMPROVEMENT
-    </div>
-
-    <h4>Vehicle Inventory Digitization</h4>
-
-    <div class="experience-metrics experience-metrics-two">
-      <div class="experience-metric">
-        <strong>Digital</strong>
-        <span>Inventory tracking system</span>
-      </div>
-
-      <div class="experience-metric">
-        <strong>Excel</strong>
-        <span>Custom-built solution</span>
-      </div>
-    </div>
-
-    <p>
-      Identified inefficiencies in the dealership's paper-based
-      vehicle inventory logbook and developed an Excel-based
-      digital tracking system for new and used vehicles.
-      Replaced manual recordkeeping with a more structured
-      process, improving inventory visibility, record
-      consistency, and accountability.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      02 / FINANCIAL OPERATIONS
-    </div>
-
-    <h4>Accounting &amp; Business Office Management</h4>
-
-    <p>
-      Oversaw accounts payable and receivable, cash controls,
-      reconciliations, inventory adjustments, and month-end
-      financial processes. Coordinated across departments
-      to maintain accurate records and support reliable
-      dealership operations.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      03 / TEAM LEADERSHIP &amp; OPERATIONAL EXECUTION
-    </div>
-
-    <h4>Administrative Team Leadership</h4>
-
-    <div class="experience-metrics experience-metrics-two">
-      <div class="experience-metric">
-        <strong>3</strong>
-        <span>Team members supervised</span>
-      </div>
-
-      <div class="experience-metric">
-        <strong>Cross-functional</strong>
-        <span>Operational coordination</span>
-      </div>
-    </div>
-
-    <p>
-      Supervised a three-person administrative and accounts
-      receivable team, overseeing delegation, training,
-      and daily workflows. Coordinated with dealership
-      departments, vendors, and leadership to resolve
-      operational issues and maintain business continuity.
-    </p>
-  </div>
-
-</details>
-  
-<details class="experience-card experience-dropdown">
-  <summary class="experience-toggle">
-    <div class="experience-toggle-info">
+    <div class="experience-story">
       <div class="experience-eyebrow">
-        OPERATIONS · PROCUREMENT · SYSTEMS DEVELOPMENT
+        01 / DIGITAL TRANSFORMATION &amp; PROCESS IMPROVEMENT
       </div>
-      <h3>Senior Administrative Coordinator</h3>
+
+      <h4>Vehicle Inventory Digitization</h4>
+
+      <div class="experience-metrics experience-metrics-two">
+        <div class="experience-metric">
+          <strong>Digital</strong>
+          <span>Inventory tracking system</span>
+        </div>
+
+        <div class="experience-metric">
+          <strong>Excel</strong>
+          <span>Custom-built solution</span>
+        </div>
+      </div>
+
       <p>
-        Purple Line LLC · 2020 – 2021
+        Identified inefficiencies in the dealership's paper-based
+        vehicle inventory logbook and developed an Excel-based
+        digital tracking system for new and used vehicles.
+        Replaced manual recordkeeping with a more structured
+        process, improving inventory visibility, record
+        consistency, and accountability.
       </p>
     </div>
-    <span class="experience-arrow" aria-hidden="true"></span>
-  </summary>
 
-  <div class="experience-intro">
-    <p class="experience-summary">
-      Supported manufacturing operations through cost
-      analysis, strategic procurement, inventory management,
-      and systems development, identifying opportunities
-      to reduce expenses and improve operational efficiency.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      01 / PROCUREMENT &amp; COST OPTIMIZATION
-    </div>
-    <h4>Strategic Sourcing &amp; Vendor Negotiation</h4>
-
-    <div class="experience-metrics experience-metrics-two">
-      <div class="experience-metric">
-        <strong>~$12.5K</strong>
-        <span>Annual component cost savings</span>
+    <div class="experience-story">
+      <div class="experience-eyebrow">
+        02 / FINANCIAL OPERATIONS
       </div>
-      <div class="experience-metric">
-        <strong>OEM</strong>
-        <span>Strategic sourcing</span>
-      </div>
+
+      <h4>Accounting &amp; Business Office Management</h4>
+
+      <p>
+        Oversaw accounts payable and receivable, cash controls,
+        reconciliations, inventory adjustments, and month-end
+        financial processes. Coordinated across departments
+        to maintain accurate records and support reliable
+        dealership operations.
+      </p>
     </div>
 
-    <p>
-      Analyzed manufacturing costs, unit economics,
-      and supplier pricing to identify opportunities
-      for cost reduction. Sourced OEM components,
-      negotiated alternative supplier arrangements,
-      and established vendor relationships that reduced
-      annual component costs by approximately $12.5K
-      while supporting manufacturing requirements.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      02 / SYSTEMS DEVELOPMENT &amp; INVENTORY MANAGEMENT
-    </div>
-    <h4>Inventory &amp; Demand Planning System</h4>
-
-    <div class="experience-metrics experience-metrics-two">
-      <div class="experience-metric">
-        <strong>~2,000</strong>
-        <span>Inventory items managed</span>
+    <div class="experience-story">
+      <div class="experience-eyebrow">
+        03 / TEAM LEADERSHIP &amp; OPERATIONAL EXECUTION
       </div>
-      <div class="experience-metric">
-        <strong>Dynamics 365</strong>
-        <span>ERP migration supported</span>
+
+      <h4>Administrative Team Leadership</h4>
+
+      <div class="experience-metrics experience-metrics-two">
+        <div class="experience-metric">
+          <strong>3</strong>
+          <span>Team members supervised</span>
+        </div>
+
+        <div class="experience-metric">
+          <strong>Cross-functional</strong>
+          <span>Operational coordination</span>
+        </div>
       </div>
+
+      <p>
+        Supervised a three-person administrative and accounts
+        receivable team, overseeing delegation, training,
+        and daily workflows. Coordinated with dealership
+        departments, vendors, and leadership to resolve
+        operational issues and maintain business continuity.
+      </p>
+    </div>
+  </details>
+
+  <!-- PURPLE LINE -->
+
+  <details class="experience-card experience-dropdown">
+    <summary class="experience-toggle">
+      <div class="experience-toggle-info">
+        <div class="experience-eyebrow">
+          OPERATIONS · PROCUREMENT · SYSTEMS DEVELOPMENT
+        </div>
+
+        <h3>Senior Administrative Coordinator</h3>
+
+        <p>Purple Line LLC · 2020 – 2021</p>
+      </div>
+
+      <span class="experience-arrow" aria-hidden="true"></span>
+    </summary>
+
+    <div class="experience-intro">
+      <p class="experience-summary">
+        Supported manufacturing operations through cost
+        analysis, strategic procurement, inventory management,
+        and systems development, identifying opportunities
+        to reduce expenses and improve operational efficiency.
+      </p>
     </div>
 
-    <p>
-      Built an Excel-based inventory and demand-planning
-      system to manage approximately 2,000 inventory items,
-      improving purchasing visibility and inventory controls.
-      Supported the subsequent migration to Microsoft
-      Dynamics 365 to strengthen operational scalability.
-    </p>
-  </div>
-
-  <div class="experience-story">
-    <div class="experience-eyebrow">
-      03 / OPERATIONAL COORDINATION
-    </div>
-    <h4>Manufacturing &amp; Workforce Readiness</h4>
-
-    <div class="experience-metrics experience-metrics-two">
-      <div class="experience-metric">
-        <strong>5–10</strong>
-        <span>New hires supported quarterly</span>
+    <div class="experience-story">
+      <div class="experience-eyebrow">
+        01 / PROCUREMENT &amp; COST OPTIMIZATION
       </div>
-      <div class="experience-metric">
-        <strong>End-to-end</strong>
-        <span>Procurement coordination</span>
+
+      <h4>Strategic Sourcing &amp; Vendor Negotiation</h4>
+
+      <div class="experience-metrics experience-metrics-two">
+        <div class="experience-metric">
+          <strong>~$12.5K</strong>
+          <span>Annual component cost savings</span>
+        </div>
+
+        <div class="experience-metric">
+          <strong>OEM</strong>
+          <span>Strategic sourcing</span>
+        </div>
       </div>
+
+      <p>
+        Analyzed manufacturing costs, unit economics,
+        and supplier pricing to identify opportunities
+        for cost reduction. Sourced OEM components,
+        negotiated alternative supplier arrangements,
+        and established vendor relationships that reduced
+        annual component costs by approximately $12.5K
+        while supporting manufacturing requirements.
+      </p>
     </div>
 
-    <p>
-      Managed procurement, vendor coordination, and
-      operational onboarding for approximately 5–10
-      new hires quarterly, aligning purchasing,
-      inventory availability, and workforce readiness
-      with manufacturing requirements.
-    </p>
-  </div>
-</details>
-  
+    <div class="experience-story">
+      <div class="experience-eyebrow">
+        02 / SYSTEMS DEVELOPMENT &amp; INVENTORY MANAGEMENT
+      </div>
+
+      <h4>Inventory &amp; Demand Planning System</h4>
+
+      <div class="experience-metrics experience-metrics-two">
+        <div class="experience-metric">
+          <strong>~2,000</strong>
+          <span>Inventory items managed</span>
+        </div>
+
+        <div class="experience-metric">
+          <strong>Dynamics 365</strong>
+          <span>ERP migration supported</span>
+        </div>
+      </div>
+
+      <p>
+        Built an Excel-based inventory and demand-planning
+        system to manage approximately 2,000 inventory items,
+        improving purchasing visibility and inventory controls.
+        Supported the subsequent migration to Microsoft
+        Dynamics 365 to strengthen operational scalability.
+      </p>
+    </div>
+
+    <div class="experience-story">
+      <div class="experience-eyebrow">
+        03 / OPERATIONAL COORDINATION
+      </div>
+
+      <h4>Manufacturing &amp; Workforce Readiness</h4>
+
+      <div class="experience-metrics experience-metrics-two">
+        <div class="experience-metric">
+          <strong>5–10</strong>
+          <span>New hires supported quarterly</span>
+        </div>
+
+        <div class="experience-metric">
+          <strong>End-to-end</strong>
+          <span>Procurement coordination</span>
+        </div>
+      </div>
+
+      <p>
+        Managed procurement, vendor coordination, and
+        operational onboarding for approximately 5–10
+        new hires quarterly, aligning purchasing,
+        inventory availability, and workforce readiness
+        with manufacturing requirements.
+      </p>
+    </div>
+  </details>
+
 </section>
 
 <!-- CONTACT -->
@@ -1093,7 +1162,7 @@ button:focus-visible {
 
       range.selectNodeContents(email);
       selection.removeAllRanges();
-      selection.addRange(range);
+      range.addRange(range);
     }
   });
 })();
